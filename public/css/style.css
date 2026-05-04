@@ -1,0 +1,318 @@
+/* HERO SECTION */
+.hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-height: 420px;
+}
+
+/* Overlay agar teks terbaca tapi gambar tetap jelas */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+    pointer-events: none; /* 🔥 tombol bisa diklik */
+}
+
+/* Konten di atas overlay */
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+/* LOGO POJOK KIRI ATAS NAVBAR */
+.logo-kiri-atas {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    z-index: 10;
+}
+
+.logo-kiri-atas img {
+    height: 75px;
+    width: auto;
+    background: transparent;
+}
+
+/* JUDUL BESAR */
+.judul-instansi {
+    margin-left: 95px; /* supaya teks tidak ketutup logo */
+    font-size: 34px;
+    line-height: 1.05;
+}
+
+/* Card hover biar hidup */
+.card:hover {
+    transform: translateY(-3px);
+    transition: 0.3s ease;
+}
+/* === FLOATING AUTH MENU === */
+.floating-auth {
+    position: fixed;
+    top: 90px; /* jarak dari atas */
+    right: 18px; /* pojok kanan */
+    z-index: 9999;
+}
+
+/* Tombol bulat */
+.floating-btn {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: none;
+    background: #0d6efd;
+    color: #fff;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.floating-btn:active {
+    transform: scale(0.98);
+}
+
+/* Panel dropdown */
+.floating-panel {
+    margin-top: 10px;
+    width: 180px;
+    background: rgba(20, 20, 20, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Item menu */
+.floating-item {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.floating-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Warna khusus admin */
+.floating-item.admin {
+    margin-top: 6px;
+    background: rgba(255, 193, 7, 0.18);
+    border: 1px solid rgba(255, 193, 7, 0.35);
+}
+/* =========================
+   SIKMA-STYLE FLOATING MENU
+========================= */
+.sikma-floating {
+    position: fixed;
+    top: 86px;
+    right: 16px;
+    z-index: 9999;
+}
+
+/* tombol bulat (ikon) */
+.sikma-fab {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    transition: 0.2s ease;
+}
+.sikma-fab:hover {
+    transform: translateY(-1px);
+}
+.sikma-fab:active {
+    transform: scale(0.98);
+}
+
+.sikma-icon {
+    font-size: 22px;
+    line-height: 1;
+}
+
+/* panel mengambang gelap */
+.sikma-panel {
+    margin-top: 10px;
+    width: 260px;
+    padding: 10px;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* item menu */
+.sikma-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 14px;
+    border-radius: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+.sikma-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* badge angka 01/02 */
+.sikma-badge {
+    min-width: 44px;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(0, 255, 255, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.35);
+    color: #bffcff;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+/* khusus admin (warna beda tipis) */
+.sikma-item.sikma-admin {
+    margin-top: 6px;
+    background: rgba(255, 193, 7, 0.12);
+    border: 1px solid rgba(255, 193, 7, 0.22);
+}
+.sikma-item.sikma-admin:hover {
+    background: rgba(255, 193, 7, 0.18);
+}
+
+/* responsif HP */
+@media (max-width: 576px) {
+    .sikma-floating {
+        top: 78px;
+        right: 12px;
+    }
+    .sikma-panel {
+        width: 230px;
+    }
+    .sikma-item {
+        font-size: 16px;
+        padding: 12px 12px;
+    }
+}
+/* =========================
+   SIKMA-STYLE FLOATING MENU
+========================= */
+.sikma-floating {
+    position: fixed;
+    top: 86px;
+    right: 16px;
+    z-index: 9999;
+}
+
+/* tombol bulat (ikon) */
+.sikma-fab {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    transition: 0.2s ease;
+}
+.sikma-fab:hover {
+    transform: translateY(-1px);
+}
+.sikma-fab:active {
+    transform: scale(0.98);
+}
+
+.sikma-icon {
+    font-size: 22px;
+    line-height: 1;
+}
+
+/* panel mengambang gelap */
+.sikma-panel {
+    margin-top: 10px;
+    width: 260px;
+    padding: 10px;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* item menu */
+.sikma-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 14px;
+    border-radius: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+.sikma-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* badge angka 01/02 */
+.sikma-badge {
+    min-width: 44px;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(0, 255, 255, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.35);
+    color: #bffcff;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+/* khusus admin (warna beda tipis) */
+.sikma-item.sikma-admin {
+    margin-top: 6px;
+    background: rgba(255, 193, 7, 0.12);
+    border: 1px solid rgba(255, 193, 7, 0.22);
+}
+.sikma-item.sikma-admin:hover {
+    background: rgba(255, 193, 7, 0.18);
+}
+
+/* responsif HP */
+@media (max-width: 576px) {
+    .sikma-floating {
+        top: 78px;
+        right: 12px;
+    }
+    .sikma-panel {
+        width: 230px;
+    }
+    .sikma-item {
+        font-size: 16px;
+        padding: 12px 12px;
+    }
+}
+.org-box.center-text {
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.org-box.center-text .org-text {
+    width: 100% !important;
+    align-items: center !important;
+    text-align: center !important;
+}

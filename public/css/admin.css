@@ -1,0 +1,140 @@
+/* ==========================================================
+   ADMIN THEME (OPSI B + OPSI D)
+   File: public/css/admin.css
+   ========================================================== */
+
+.admin-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 50%, #f8fafc 100%);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* TOPBAR / HEADER */
+.admin-page .topbar {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* background header dari public/dpmd.jpeg */
+.admin-page .topbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/dpmd.jpeg") center/cover no-repeat;
+    transform: scale(1.05);
+    z-index: 0;
+}
+
+/* overlay gelap */
+.admin-page .topbar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(15, 23, 42, 0.92) 0%,
+        rgba(30, 58, 138, 0.85) 60%,
+        rgba(15, 23, 42, 0.92) 100%
+    );
+    z-index: 1;
+}
+
+.admin-page .topbar .container {
+    position: relative;
+    z-index: 2;
+}
+
+.admin-page .brand-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+}
+
+.admin-page .brand-logo {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 6px;
+}
+
+.admin-page .brand-title {
+    margin: 0;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.1;
+}
+
+.admin-page .brand-subtitle {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+/* WRAPPER spacing biar konsisten */
+.admin-page .page-wrapper {
+    padding: 30px 0;
+}
+
+/* TITLE */
+.admin-page .page-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111827;
+    margin: 0;
+}
+
+/* CARD MODERN */
+.admin-page .card-modern {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.admin-page .card-modern .card-body {
+    padding: 20px;
+}
+
+/* INPUT & BUTTON */
+.admin-page .form-control {
+    border-radius: 10px;
+}
+
+.admin-page .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.45);
+}
+
+.admin-page .btn {
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* TABLE */
+.admin-page .table thead th {
+    background: #f3f4f6 !important;
+    color: #111827 !important;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+.admin-page .table tbody td {
+    vertical-align: middle;
+}
+
+.admin-page .table-hover tbody tr:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+/* PAGINATION */
+.admin-page .pagination .page-link {
+    border-radius: 8px !important;
+    margin: 0 3px;
+}
